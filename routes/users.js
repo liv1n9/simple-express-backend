@@ -8,7 +8,7 @@ const { ERole } = require("../configs/constants");
 /* GET users listing. */
 router.get("/", usersController.get);
 router.get("/:id", usersController.getById);
-router.post("/", JWTAuth, permit(ERole.ADMIN), usersController.create);
+router.post("/", usersController.create);
 router.put("/:id", JWTAuth, permit(ERole.ADMIN), usersController.updateById);
 router.delete("/:id", JWTAuth, permit(ERole.ADMIN), usersController.deleteById);
 
