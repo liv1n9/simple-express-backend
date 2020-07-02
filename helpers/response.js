@@ -1,0 +1,1 @@
+exports.response = (data, total) => ({ data, total });
