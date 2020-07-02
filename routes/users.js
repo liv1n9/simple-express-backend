@@ -5,7 +5,6 @@ const { JWTAuth } = require("../helpers/passport");
 const { permit } = require("../helpers/role");
 const { ERole } = require("../configs/constants");
 
-
 /* GET users listing. */
 router.get("/", usersController.get);
 router.get("/:id", usersController.getById);
