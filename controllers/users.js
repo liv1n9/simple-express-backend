@@ -51,8 +51,7 @@ exports.updateById = async (req, res, next) => {
 exports.deleteById = async (req, res, next) => {
     try {
         const id = req.params.id;
-        const update = req.body;
-        const data = await userModel.findByIdAndUpdate(id, update, { new: true, runValidators: true });
+        const data = await userModel.findByIdAndDelete(id);
         res.status(200).json(data);
     } catch (err) {
         return next(err);
